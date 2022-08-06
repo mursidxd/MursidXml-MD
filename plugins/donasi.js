@@ -1,16 +1,19 @@
-const qrku = "https://i.ibb.co/MnbqZ0N/qr-Aguz-Familia-07-06-22-1654614928.png"
+const qrmursid = "https://telegra.ph/file/5b967438c7a3337d349fa.jpg"
 
-let handler = async (m, { conn, usedPrefix }) => conn.sendButtonImg(m.chat, qrku, `
-╭─「 Donasi • Dana 」
-│ • Telkomsel [081320170984]
-│ • Dana  [081320170984]
-╰────
-╭─「 *NOTE* 」
-│ > Ingin donasi? Wa.me/6281320170984
+let handler = async (m, { conn, usedPrefix }) => conn.sendButtonImg(m.chat, qrmursid, `
+┏──「 Donasi • E-money 」─⬣
+│ • Gopay : 088233832771
+│ • Dana : 088233832771
+│ • Smartfren : 088233832771
+│ • Tri : 089674452300
+┗────────⬣
+┏──「 *NOTE* 」─⬣
+│ > Ingin donasi? wa.me/6288233832771
 │ _Hasil donasi akan digunakan buat sewa_
 │ _atau beli *RDP/VPS* agar bot bisa jalan_
-│ _24jam tanpa kendala_
-╰────
+│ _24jam tanpa kendala, siapapun yang donasi_
+│ _akan saya kasih user premium selama 2 minggu_
+┗────────⬣
 `.trim(), wm, 'Menu', usedPrefix + 'menu', m) // Tambah sendiri kalo mau
 handler.help = ['donasi']
 handler.tags = ['about']
