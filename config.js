@@ -38,23 +38,23 @@ global.APIKeys = { // APIKey Here
   'https://api.adiofficial.xyz': 'apikey lu'
 }
 
-global.wait = '_*𝐬𝐞𝐝𝐚𝐧𝐠 𝐝𝐢 𝐩𝐫𝐨𝐬𝐞𝐬 ...*_'
-global.eror = '_*мααƒ ѕєяνєя тι∂αк ѕтαвιℓ..*_'
+global.wait = '_*𝑻𝒖𝒏𝒈𝒈𝒖 𝒔𝒆𝒅𝒂𝒏𝒈 𝒅𝒊 𝒑𝒓𝒐𝒔𝒆𝒔...*_'
+global.eror = '_*𝑴𝒂𝒂𝒇 𝒔𝒆𝒓𝒗𝒆𝒓 𝒔𝒆𝒅𝒂𝒏𝒈 𝒆𝒓𝒓𝒐𝒓*_'
 global.image = 'https://telegra.ph/file/bd465c883f07ebaeadbac.jpg'
 global.Intervalmsg = 1800 //detik
 
 //========Url Template Buttons=========//
-global.dtu = 'ɪɴꜱᴛᴀɢʀᴀᴍ'
+global.dtu = '𝑰𝒏𝒔𝒕𝒂𝒈𝒓𝒂𝒎'
 global.urlnya = "https://www.instagram.com/mursid.st"
 
 //============= callButtons =============//
-global.dtc = 'ᴄᴀʟʟ ᴏᴡɴᴇʀ'
+global.dtc = '𝑪𝒂𝒍𝒍 𝒐𝒘𝒏𝒆𝒓'
 global.phn = '+62 882-3383-2771'
 
 //============= Games ================//
-global.benar = '_*Benar✅*_'
-global.salah = '_*Salah❌*_'
-global.dikit = "dikit lagi, semangat ya :')"
+global.benar = '_*𝑩𝒆𝒏𝒂𝒓*_'
+global.salah = '_*𝑺𝒂𝒍𝒂𝒉*_'
+global.dikit = "_*𝑫𝒊𝒌𝒊𝒕 𝒍𝒂𝒈𝒊*_"
 
 global.multiplier = 100 // The higher, The harder levelup
 
@@ -64,7 +64,7 @@ global.author = data.owner;
 
 //=========== Requirements ==========//  
         global.colong1 = 'Ciss 📸'
-        global.colong2 = 'ʙy ᴀɢᴜᴢ ꜰᴀᴍɪʟɪᴀ'
+        global.colong2 = 'ву мυʀѕι∂-вσт'
 global.img = pickRandom(waifu)
 global.fla = pickRandom(flaaa)
 
