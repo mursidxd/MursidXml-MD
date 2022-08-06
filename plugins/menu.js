@@ -5,32 +5,63 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌─〔 %me 〕
-├ *%ucapan %name*
-│
-├ Tersisa *%limit Limit*
-├ Role *%role*
-├ Level *%level (%exp / %maxexp)* [%xp4levelup]
-├ %totalexp XP secara Total
-│
-├ Tanggal: *%week %weton, %date*
-├ Tanggal Islam: *%dateIslamic*
-├ Waktu: *%time*
-│
-├ Uptime: *%uptime (%muptime)*
-├ Database: %rtotalreg dari %totalreg
-├ Github:
-├ %github
-└────
+┌──────═┅═───────⬣
+│            *мυʀѕι∂-χмℓ*
+└┬──────────────┈ ⳹
+   │     「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥 」
+┌┤• *Tersisa* : %limit Limit
+││• *Role* : %role
+││• *Level* : %level 
+││• *Exp* : %totalexp XP 
+││• *Hari* : %week
+││• *Tanggal* : %week %weton, %date
+││• *Tanggal Islam* : %dateIslamic
+││• *Waktu* : %time
+│└──────────────┈ ⳹ 
+│        「 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢 」
+│• *Uptime* : %uptime / %muptime
+│• *Bailyes Version* : 4.2.0
+│• *Database* : %rtotalreg dari %totalreg
+│• *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+├───────────────┈ ⳹
+│       「 𝗚𝗥𝗨𝗣 𝗕𝗢𝗧 」
+│• bit.ly/grup-wabot-aq¹
+│• bit.ly/grup-wabot-aq²
+│• bit.ly/grup-wabot-aq³
+│• bit.ly/grup-wabot-aq⁴
+└──────═┅═───────⬣
 %readmore`.trim(),
-  header: '┌─〔 %category 〕',
-  body: '├ %cmd %islimit %isPremium',
-  footer: '└────\n',
+  header: '┌──「 %category 」──⬣',
+  body: '│• %cmd %islimit %isPremium',
+  footer: '└────═┅═────⬣\n',
   after: `
+┌──  *BIG THANKS TO*  ───⬣
+│• Allah SWT
+│• Nurutomo as wabot-aq
+│• Istikmal as BochilGaming
+│• Ariffb as stikerin
+│• Aguz Familia
+│• Syahrul
+│• Vanesha Desu
+│• Aniq12
+│• Amirul Dev
+│• Rasell Comel
+│• Faudzan
+│• Krisna
+│• Fatur as Ftwrr
+ | • Krizyn_Ofc
+│• Ziv San
+│• Mursid S
+│• Nadia Cans
+│• Nayla
+│• All Creator Bot
+└─────═┅═─────⬣
+
 *%npmname@^%version*
 ${'```%npmdesc```'}
 `,
 }
+let haori = './anuu.mp3' // SCRIPT ORIGINAL BY FAMILY MD
 let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
 
   let tags
@@ -38,7 +69,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
   let arrayMenu = ['all', 'game', 'xp', 'stiker', 'kerangajaib', 'quotes', 'admin', 'grup', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database', 'quran', 'audio', 'jadibot', 'info', 'tanpakategori', 'owner']
   if (!arrayMenu.includes(teks)) teks = '404'
   if (teks == 'all') tags = {
-    'main': 'UTAMA',
+    'main': 'Utama',
     'game': 'Game',
     'rpg': 'RPG',
     'xp': 'Exp & Limit',
@@ -185,34 +216,104 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         enabled: !plugin.disabled,
       }
     })
+    const wita = moment.tz('Asia/Makassar').format("HH:mm:ss")
+    const wit = moment.tz('Asia/Jayapura').format("HH:mm:ss")
+    const hariRaya = new Date('January 1, 2023 23:59:59')
+    const sekarang = new Date().getTime()
+    const Selisih = hariRaya - sekarang
+    const jhari = Math.floor( Selisih / (1000 * 60 * 60 * 24));
+    const jjam = Math.floor( Selisih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+    const mmmenit = Math.floor( Selisih % (1000 * 60 * 60) / (1000 * 60))
+    const ddetik = Math.floor( Selisih % (1000 * 60) / 1000)
+    const hariRayaramadan = new Date('April 21, 2023 23:59:59')
+    const sekarangg = new Date().getTime()
+    const lebih = hariRayaramadan - sekarangg
+    const harii = Math.floor( lebih / (1000 * 60 * 60 * 24));
+    const jamm = Math.floor( lebih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+    const menitt = Math.floor( lebih % (1000 * 60 * 60) / (1000 * 60))
+    const detikk = Math.floor( lebih % (1000 * 60) / 1000)
+    const natal = new Date('December 24, 2022 23:59:59')
+    const sekara = new Date().getTime()
+    const Kuran = natal - sekara
+    const ahari = Math.floor( Kuran / (1000 * 60 * 60 * 24));
+    const ajam = Math.floor( Kuran % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+    const anet = Math.floor( Kuran % (1000 * 60 * 60) / (1000 * 60))
+    const aetek = Math.floor( Kuran % (1000 * 60) / 1000)
+    let pe = '```'
+    let _uptime = process.uptime() * 1000
+    let _muptime
+    if (process.send) {
+      process.send('uptime')
+      _muptime = await new Promise(resolve => {
+        process.once('message', resolve)
+        setTimeout(resolve, 1000)
+      }) * 1000
+    }
+    let muptime = clockString(_muptime)
+    let uptime = clockString(_uptime)
+    global.jam = time
+    let totalreg = Object.keys(global.db.data.users).length
+    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+    let help = Object.values(global.plugins).filter(plugin => !plugin.disabled).map(plugin => {
+      return {
+        help: Array.isArray(plugin.help) ? plugin.help : [plugin.help],
+        tags: Array.isArray(plugin.tags) ? plugin.tags : [plugin.tags],
+        prefix: 'customPrefix' in plugin,
+        limit: plugin.limit,
+        premium: plugin.premium,
+        enabled: !plugin.disabled,
+      }
+    })
+    if (teks == '404') {
+      let judul =  `${global.ucapan}, ${name},      
+┌──────═┅═──────⬣
+│    *Hai*,  @${m.sender.split`@`[0]}
+└┬────────────┈ ⳹
+┌┤• Nama : ${name}
+││• Limit : ${limit}
+││• Waktu : ${time}
+││• Total Xp : ${exp}
+││• Role : ${role}
+││• Tag : @${m.sender.split`@`[0]}
+││• Status : ${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner' : 'Users'}
+│└────────────┈ ⳹
+│         「 ACARA 」
+│• *Tahun Baru*
+│ ${jhari} Hari ${jjam} Jam ${mmmenit} Menit ${ddetik} Detik
+│• *Ramadan*
+│ ${harii} Hari ${jamm} Jam ${menitt} Menit ${detikk} Detik
+│• *Natal*
+│ ${ahari} Hari ${ajam} Jam ${anet} Menit ${aetek} Detik
+└──────═┅═──────⬣
+`.trim()
     if (teks == '404') {
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
-        title: 'List Menu ' + namabot,
+        title: '𝙻𝚒𝚜𝚝 𝙼𝚎𝚗𝚞 𝙽𝚊𝚍𝚒𝚊 𝙱𝚘𝚝 𝚆𝚑𝚊𝚝𝚜𝚊𝚙𝚙',
         rows: [
-          { title: 'Semua Perintah', rowId: `${_p}? all` },
-          { title: 'Game', rowId: `${_p}? game` },
-          { title: 'XP', rowId: `${_p}? xp` },
-          { title: 'Stiker', rowId: `${_p}? stiker` },
-          { title: 'Kerang Ajaib', rowId: `${_p}? kerangajaib` },
-          { title: 'Quotes', rowId: `${_p}? quotes` },
-          { title: 'Grup', rowId: `${_p}? grup` },
-          { title: 'Premium', rowId: `${_p}? premium` },
-          { title: 'Internet', rowId: `${_p}? internet` },
-          { title: 'Anonymous', rowId: `${_p}? anonymous` },
-          { title: 'Nulis & Logo', rowId: `${_p}? nulis` },
-          { title: 'Downloader', rowId: `${_p}? downloader` },
-          { title: 'Tools', rowId: `${_p}? tools` },
-          { title: 'Fun', rowId: `${_p}? fun`},
-          { title: 'Database', rowId: `${_p}? database` },
-          { title: 'Vote & Absen', rowId: `${_p}? vote` },
-          { title: "Al-Qur\'an", rowId: `${_p}? quran` },
-          { title: 'Pengubah Suara', rowId: `${_p}? audio` },
-          { title: 'Jadi Bot', rowId: `${_p}? jadibot` },
-          { title: 'Info', rowId: `${_p}? info` },
-          { title: 'Tanpa Kategori', rowId: `${_p}? tanpakategori` },
-          { title: 'Owner', rowId: `${_p}? owner` },
+          { title: '𝑺𝒆𝒎𝒖𝒂 𝒑𝒆𝒓𝒊𝒏𝒕𝒂𝒉', rowId: `${_p}? all` },
+          { title: '𝑮𝒂𝒎𝒆', rowId: `${_p}? game` },
+          { title: '𝑬𝒙𝒑', rowId: `${_p}? xp` },
+          { title: '𝑺𝒕𝒊𝒄𝒌𝒆𝒓', rowId: `${_p}? stiker` },
+          { title: '𝑲𝒆𝒓𝒂𝒏𝒈 𝒂𝒋𝒂𝒊𝒃', rowId: `${_p}? kerangajaib` },
+          { title: '𝑸𝒖𝒐𝒕𝒆𝒔', rowId: `${_p}? quotes` },
+          { title: '𝑮𝒓𝒖𝒑', rowId: `${_p}? grup` },
+          { title: '𝑷𝒓𝒆𝒎𝒊𝒖𝒎', rowId: `${_p}? premium` },
+          { title: '𝑰𝒏𝒕𝒆𝒓𝒏𝒆𝒕', rowId: `${_p}? internet` },
+          { title: '𝑨𝒏𝒐𝒏𝒚𝒎𝒐𝒖𝒔', rowId: `${_p}? anonymous` },
+          { title: '𝑵𝒖𝒍𝒊𝒔 & 𝒍𝒐𝒈𝒐', rowId: `${_p}? nulis` },
+          { title: '𝑫𝒐𝒘𝒏𝒍𝒐𝒂𝒅𝒆𝒓', rowId: `${_p}? downloader` },
+          { title: '𝑻𝒐𝒐𝒍𝒔', rowId: `${_p}? tools` },
+          { title: '𝑭𝒖𝒏', rowId: `${_p}? fun`},
+          { title: '𝑫𝒂𝒕𝒂𝒃𝒂𝒔𝒆', rowId: `${_p}? database` },
+          { title: '𝑽𝒐𝒕𝒆 & 𝒂𝒃𝒔𝒆𝒏', rowId: `${_p}? vote` },
+          { title: "𝑨𝒍-𝑸𝒖𝒓\'𝒂𝒏", rowId: `${_p}? quran` },
+          { title: '𝑷𝒆𝒏𝒈𝒖𝒃𝒂𝒉 𝒔𝒖𝒂𝒓𝒂', rowId: `${_p}? audio` },
+          { title: '𝑱𝒂𝒅𝒊 𝒃𝒐𝒕', rowId: `${_p}? jadibot` },
+          { title: '𝑰𝒏𝒇𝒐', rowId: `${_p}? info` },
+          { title: '𝑻𝒂𝒏𝒑𝒂 𝒌𝒂𝒕𝒆𝒈𝒐𝒓𝒊', rowId: `${_p}? tanpakategori` },
+          { title: '𝑶𝒘𝒏𝒆𝒓', rowId: `${_p}? owner` },
         ]
       }
     ]
@@ -221,7 +322,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       footer: wm,
       mentions: await conn.parseMention(judul),
       title: '',
-      buttonText: "Klik Disini",
+      buttonText: "𝗖𝗹𝗶𝗰𝗸 𝗛𝗲𝗿𝗲",
       sections
     }
     return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
@@ -248,8 +349,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
           ...help.filter(menu => menu.tags && menu.tags.includes(tag) && menu.help).map(menu => {
             return menu.help.map(help => {
               return body.replace(/%cmd/g, menu.prefix ? help : '%p' + help)
-                .replace(/%islimit/g, menu.limit ? '(Limit)' : '')
-                .replace(/%isPremium/g, menu.premium ? '(Premium)' : '')
+                .replace(/%islimit/g, menu.limit ? '(Ⓛ)' : '')
+                .replace(/%isPremium/g, menu.premium ? '(Ⓟ)' : '')
                 .trim()
             }).join('\n')
           }),
@@ -276,9 +377,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3TemplateButtonImg(m.chat, fla + teks, text.trim(), wm, `🏅Owner`, `${_p}owner`, `🎖ThanksTo`, `${_p}tqto`, `🎗  Donasi  🎗`, `${_p}infobot`)
-  } catch (e) {
-    conn.reply(m.chat, 'Maaf, menu sedang error', m)
+    await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `⍴ᥱmіᥣіk ᑲ᥆𝗍`, `${_p}owner`, `rᥙᥣᥱs`, `${_p}rules`, `ძ᥆ᥒᥲsі`, `${_p}donasi`)
+ conn.sendFile(m.chat, haori, 'anuu.mp3', null, m, true, {
+type: 'audioMessage', // paksa tanpa convert di ffmpeg
+ptt: true
+     }) 
+ } catch (e) {
+    conn.reply(m.chat, 'mᥲᥲ𝖿 mᥱᥒᥙ sᥱძᥲᥒg ᥱrr᥆r', m)
     throw e
   }
 }
