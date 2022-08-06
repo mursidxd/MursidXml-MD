@@ -1,7 +1,7 @@
 {
-    "name": "Family-MD",
+    "name": "𝗡𝗮𝗱𝗶𝗮-𝗠𝗗",
     "version": "2.4.0",
-    "description": "Simle Bot WhatsApp with Baileys Multi Device",
+    "description": "𝑪𝒖𝒔𝒕𝒐𝒎𝒊𝒛𝒂𝒃𝒍𝒆 𝑾𝒉𝒂𝒕𝒔𝑨𝒑𝒑 𝑩𝒐𝒕 𝑾𝒊𝒕𝒉 𝑩𝒂𝒊𝒍𝒆𝒚𝒔 𝑴𝒖𝒍𝒕𝒊 𝑫𝒆𝒗𝒊𝒄𝒆",
     "depecrated": false,
     "main": "index.js",
     "directories": {
