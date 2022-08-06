@@ -64,7 +64,7 @@ global.author = data.owner;
 
 //=========== Requirements ==========//  
         global.colong1 = 'Ciss 📸'
-        global.colong2 = 'ву мυʀѕι∂-вσт'
+        global.colong2 = 'ʙʏ ᴍᴜʀsɪᴅ xᴢʏ'
 global.img = pickRandom(waifu)
 global.fla = pickRandom(flaaa)
 
