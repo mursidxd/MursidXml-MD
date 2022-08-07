@@ -26,7 +26,6 @@ Rp. 25.000 Pulsa
 
 wa.me/${owner[0]}
 *мυʀѕι∂-χмℓ*
-*Owner ${conn.user.name}*
 `,
   buttonText: 'Harga Sesuai Pasaran',
   listType: 2,
