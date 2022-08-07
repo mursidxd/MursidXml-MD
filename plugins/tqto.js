@@ -33,6 +33,8 @@ Ziv San:
 https://github.com/Zivfurr
 Krizynofc:
 https://github.com/krizynofc
+Nayla:
+https://github.com/naylatod7
 
 \`\`\`${conn.user.name}\`\`\`
 `
