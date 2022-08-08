@@ -306,10 +306,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       readmore: readMore
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
-    await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `⍴ᥱmіᥣіk ᑲ᥆𝗍`, `${_p}owner`, `rᥙᥣᥱs`, `${_p}rules`, `ძ᥆ᥒᥲsі`, `${_p}donasi`)
+    await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ʀυℓєѕ`, `${_p}rules`, `ᴅσɴαѕι`, `${_p}donasi`)
     conn.sendFile(m.chat, bzz, 'anuu.mp3', null, m, true, { 
  type: 'audioMessage',  
- ptt: true, contextInfo:{ externalAdReply: {title: '𝗦𝗶𝗺𝗽𝗹𝗲 𝗕𝗼𝘁 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽', body: `${pickRandom(['Simple Bot WhatsApp', 'ɴα∂ια вσт ву мυʀѕι∂-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/7deff8fcf8e0b15eecd50.jpg')).buffer(),}}  
+ ptt: true, contextInfo:{ externalAdReply: {title: '𝗦𝗶𝗺𝗽𝗹𝗲 𝗕𝗼𝘁 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽', body: `${pickRandom(['Simple Bot WhatsApp', 'ɴα∂ια вσт ву мυʀѕι∂-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/7d5335b528e954dff4248.jpg')).buffer(),}}  
       }) 
  } catch (e) {
     conn.reply(m.chat, 'мααƒ, мєɴυ ѕααт ιɴι ѕє∂αɴg єʀʀσʀ', m)
