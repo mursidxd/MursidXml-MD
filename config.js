@@ -40,15 +40,15 @@ global.APIKeys = { // APIKey Here
 
 global.wait = '_*𝑻𝒖𝒏𝒈𝒈𝒖 𝒔𝒆𝒅𝒂𝒏𝒈 𝒅𝒊 𝒑𝒓𝒐𝒔𝒆𝒔...*_'
 global.eror = '_*𝑴𝒂𝒂𝒇 𝒔𝒆𝒓𝒗𝒆𝒓 𝒔𝒆𝒅𝒂𝒏𝒈 𝒆𝒓𝒓𝒐𝒓*_'
-global.image = 'https://telegra.ph/file/bd465c883f07ebaeadbac.jpg'
+global.image = 'https://telegra.ph/file/7d5335b528e954dff4248.jpg'
 global.Intervalmsg = 1800 //detik
 
 //========Url Template Buttons=========//
-global.dtu = '𝑰𝒏𝒔𝒕𝒂𝒈𝒓𝒂𝒎'
+global.dtu = 'ɪɴѕтαgʀαм'
 global.urlnya = "https://www.instagram.com/mursid.st"
 
 //============= callButtons =============//
-global.dtc = '𝑪𝒂𝒍𝒍 𝒐𝒘𝒏𝒆𝒓'
+global.dtc = 'ᴄαℓℓ σωɴєʀ'
 global.phn = '+62 882-3383-2771'
 
 //============= Games ================//
