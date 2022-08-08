@@ -40,7 +40,7 @@ global.APIKeys = { // APIKey Here
 
 global.wait = '_*𝑻𝒖𝒏𝒈𝒈𝒖 𝒔𝒆𝒅𝒂𝒏𝒈 𝒅𝒊 𝒑𝒓𝒐𝒔𝒆𝒔...*_'
 global.eror = '_*𝑴𝒂𝒂𝒇 𝒔𝒆𝒓𝒗𝒆𝒓 𝒔𝒆𝒅𝒂𝒏𝒈 𝒆𝒓𝒓𝒐𝒓*_'
-global.image = 'https://telegra.ph/file/7d5335b528e954dff4248.jpg'
+global.image = 'https://telegra.ph/file/9ae789de914f11595226b.jpg'
 global.Intervalmsg = 1800 //detik
 
 //========Url Template Buttons=========//
