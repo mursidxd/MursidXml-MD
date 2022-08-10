@@ -310,7 +310,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     await conn.send2ButtonDoc(m.chat, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
     conn.sendFile(m.chat, bzz, 'anuu.mp3', null, m, true, { 
  type: 'audioMessage',  
- ptt: true, contextInfo:{ externalAdReply: {title: `Aktif selama : ${uptime}`, body: `${pickRandom(['ɴα∂ια вσт ву мυʀѕι∂-χмℓ', 'ɴα∂ια вσт ву мυʀѕι∂-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/7d5335b528e954dff4248.jpg')).buffer(),}}  
+ ptt: true, contextInfo:{ externalAdReply: {title: `Aktif selama : ${uptime}`, body: `${pickRandom(['ɴα∂ια вσт ву мυʀѕι∂-χмℓ', 'ɴα∂ια вσт ву мυʀѕι∂-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/647d068f1ab70864a7fc7.jpg')).buffer(),}}  
       }) 
  } catch (e) {
     conn.reply(m.chat, 'мααƒ, мєɴυ ѕααт ιɴι ѕє∂αɴg єʀʀσʀ', m)
