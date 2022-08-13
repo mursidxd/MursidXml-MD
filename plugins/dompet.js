@@ -18,22 +18,22 @@ let handler = async (m, { conn, usedPrefix }) => {
     let username = conn.getName(who)
     let jodoh = `Berhubungan dengan @${pasangan.split('@')[0]}`
     let str = `
-╭───ꕥ *PROFILE* ꕥ───✾
-│•> Name: ${username} | ${name}
-│•> Status: ${pasangan ? jodoh : 'Jomblo' }
-│•> Premium: ${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}
-│•> Number: ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
-│•> Umur: *${age == '-1' ? 'Belum Daftar' : age}*
-│•> Link: wa.me/${who.split`@`[0]}
-│•> Level: *${level}*
-│•> Rank : *${role}*
-│•> Limit: *${limit}*
-│•> Registered: ${registered ? 'Yes (' +  moment(new Date(regTime)).format('dddd, Do MMMM YYYY, hh:mm')+ ')': 'No'}
-│•> Atm: *${atm}*
-│•> Money: *${money}*
-│•> Exp  : *${exp}*
-│•> Warning : *${warning}*
-╰─────────────────────
+┌──「 *PROFILE* 」──⬣
+│• Name : ${username} | ${name}
+│• Status : ${pasangan ? jodoh : 'Jomblo' }
+│• Premium : ${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}
+│• Number : ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}
+│• Umur : *${age == '-1' ? 'Belum Daftar' : age}*
+│• Link : wa.me/${who.split`@`[0]}
+│• Level : *${level}*
+│• Rank : *${role}*
+│• Limit : *${limit}*
+│• Registered : ${registered ? 'Yes (' +  moment(new Date(regTime)).format('dddd, Do MMMM YYYY, hh:mm')+ ')': 'No'}
+│• Atm : *${atm}*
+│• Money : *${money}*
+│• Exp : *${exp}*
+│• Warning : *${warning}*
+└─────────────────⬣
 `.trim()
     let mentionedJid = [who]
     conn.sendFile(m.chat, pp, 'pp.jpg', str, m, false, { contextInfo: {
