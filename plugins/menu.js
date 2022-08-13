@@ -9,24 +9,27 @@ const defaultMenu = {
 │         мυʀѕι∂ вσт-χмℓ
 └┬──────────────┈ ⳹
    │     「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥 」
-┌┤• Tersisa : %limit Limit
-││• Role : %role
-││• Level : %level 
-││• Exp : %totalexp XP 
-││• Hari : %week
-││• Tanggal : %week %weton, %date
-││• Tanggal Islam : %dateIslamic
-││• Waktu : %time
+┌┤• *Tersisa* : %limit Limit
+││• *Role* : %role
+││• *Level* : %level 
+││• *Exp* : %totalexp XP 
+││• *Hari* : %week
+││• *Tanggal* : %week %weton, %date
+││• *Tanggal Islam* : %dateIslamic
+││• *Waktu* : %time
 │└──────────────┈ ⳹ 
 │        「 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢 」
-│• Uptime : %uptime / %muptime
-│• Bailyes Version : 4.2.0
-│• Database : %rtotalreg dari %totalreg
-│• Memory Used : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-│• Nama : Mursid S
-│• Umur : 18 Tahun
-│• Status : Pelajar SMK
-│• Asal Kota : Yogyakarta
+│• *Runtime* : %uptime / %muptime
+│• *Bailyes Version* : 4.2.0
+│• *Database* : %rtotalreg dari %totalreg
+│• *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+├───────────────┈ ⳹
+│ *Note* : 
+│ Untuk memasukan bot ke grup
+│ Harap izin dulu sama owner bot
+│ Terlebih dahulu, jangan asal culik
+│ Bot ke dalam grup jika melanggar
+│ Ban permanen & Blok permanen
 └──────────────────⬣
 %readmore`.trim(),
   header: '┌──「 %category 」──⬣',
@@ -46,12 +49,10 @@ const defaultMenu = {
 │• Rasell Comel
 │• Faudzan
 │• Krisna
-│• Fatur as Ftwrr
- | • Krizyn_Ofc
+│• Nayla Hanifah
+ | • Krizynofc
 │• Ziv San
 │• Mursid S
-│• Nadia Cans ( Ayang )
-│• Nayla
 │• All Creator Bot
 └─────────────⬣
 
@@ -214,6 +215,35 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       }
     })
     if (teks == '404') {
+    	      let tksk =  ` ┌──────────────────⬣
+ │         *мυʀѕι∂ вσт-χмℓ*
+ └┬─────────────────⳹
+    │       *「 USER INFO  」*
+ ┌┤• *Nama* : ${name}
+ ││• *Exp* : ${exp}
+ ││• *Limit* : ${limit}
+ ││• *Level* : ${level}
+ ││• *Premium* : ${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}
+ ││
+ ││• *Rank* : ${role}
+ ││• *Umur* : ${age == '-1' ? 'Belum Daftar' : age}   
+ ││• *Link* : wa.me/${m.sender.split`@`[0]}
+ ││• *Money* : ${money}
+ ││• *Status* : ${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner' : 'User'}
+ ││
+ ││• *Hari* : ${week}
+ ││• *Weton* : ${weton}
+ ││• *Tanggal* : ${date}
+ ││• *Waktu* : ${time}
+ ││• *Tanggal Islam* : ${dateIslamic}
+ │└─────────────────⳹
+ │• *Baterai* : ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Charger' : ''}` : 'Tidak Diketahui'} 
+ │• *Run Bot* : Panel/RDP
+ │• *Runtime* : ${uptime} 
+ │• *Bot Name* : ${conn.user.name} 
+ │• *Name Owner* : Mursid S
+ │• *Register* : ${totalreg} 
+ └──────────────────⬣`
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
@@ -245,10 +275,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       }
     ]
     const listMessage = {
-      text: judul,
+      text: tksk,
       footer: wm,
       mentions: await conn.parseMention(judul),
-      title: '',
+      title: judul,
       buttonText: "Click Here",
       sections
     }
@@ -305,6 +335,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ʀυℓєѕ`, `${_p}rules`, `ᴅσɴαѕι`, `${_p}donasi`)
+    await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
     await conn.send2ButtonDoc(m.chat, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
     conn.sendFile(m.chat, bzz, 'anuu.mp3', null, m, true, { 
  type: 'audioMessage',  
