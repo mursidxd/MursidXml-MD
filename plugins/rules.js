@@ -8,11 +8,11 @@ Kebijakan Privasi
 2. Bot tidak akan menyebarkan nomor users.
 3. Bot tidak akan menyimpan media yang dikirimkan oleh users.
 4. Bot tidak akan menyalah gunakan data data users.
-5. Owner BOT berhak melihat data riwayat chat users.
-6. Owner BOT berhak melihat status users.
-7. Owner BOT dapat melihat riwayat chat, dan media yang dikirimkan users.
+5. Owner berhak melihat data riwayat chat users.
+6. Owner berhak melihat status users.
+7. Owner dapat melihat riwayat chat, dan media yang dikirimkan users.
 
-Peraturan NADIA BOT
+Peraturan Mursid XML
 1. Users dilarang menelpon maupun memvideo call nomor bot.
 2. Users dilarang mengirimkan berbagai bug, virtex, dll ke nomor bot.
 3. Users diharap tidak melakukan spam dalam penggunaan bot.
@@ -20,7 +20,7 @@ Peraturan NADIA BOT
 5. Users diharap untuk tidak menyalah gunakan fitur fitur bot.
 6. Dilarang keras menggunakan fitur bot 18+
 
-Syarat Ketentuan NADIA BOT WHATSAPP
+Syarat Ketentuan Mursid XML
 1. Bot akan keluar dari group apabila sudah waktunya keluar.
 2. Bot dapat mem-ban users secara sepihak terlepas dari users salah atau tidak.
 3. Bot *tidak akan bertanggungjawab atas apapun yang users lakukan terhadap fitur bot.*
@@ -36,10 +36,10 @@ SC : Thanks to
 • Syahrul
 • Amirul Dev
 • Vania
+• Nayla Hanifah
 • Ziv San
 • Krizyn_Ofc
 • Mursid S
-• Nadia ( Ayang )
 • All creator Bot
 
 Rules: 20 Oktober 2022
