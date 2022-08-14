@@ -223,14 +223,14 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
  ││• *Exp* : ${exp}
  ││• *Limit* : ${limit}
  ││• *Level* : ${level}
- ││• *Premium* : ${premium ? `${conn.msToDate(premiumTime - new Date() * 1)}` : 'Gratisan'}
- ││
  ││• *Rank* : ${role}
+ │├───────────────┈ ⳹
  ││• *Umur* : ${age == '-1' ? 'Belum Daftar' : age}   
  ││• *Link* : wa.me/${m.sender.split`@`[0]}
  ││• *Money* : ${money}
  ││• *Status* : ${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner' : 'User'}
- ││
+ ││• *Run Bot* : Panel/VPS
+ │├───────────────┈ ⳹
  ││• *Hari* : ${week}
  ││• *Weton* : ${weton}
  ││• *Tanggal* : ${date}
@@ -238,7 +238,6 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
  ││• *Tanggal Islam* : ${dateIslamic}
  │└─────────────────⳹
  │• *Baterai* : ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Charger' : ''}` : 'Tidak Diketahui'} 
- │• *Run Bot* : Panel/RDP
  │• *Runtime* : ${uptime} 
  │• *Bot Name* : ${conn.user.name} 
  │• *Name Owner* : Mursid S
@@ -336,10 +335,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ʀυℓєѕ`, `${_p}rules`, `ᴅσɴαѕι`, `${_p}donasi`)
     await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
-    await conn.send2ButtonDoc(m.chat, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
+    await conn.send2ButtonDoc(m.chat, text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Aktif selama* : *${uptime}*\n*Waktu : ${time}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
     conn.sendFile(m.chat, bzz, 'anuu.mp3', null, m, true, { 
  type: 'audioMessage',  
- ptt: true, contextInfo:{ externalAdReply: {title: `Aktif selama : ${uptime}`, body: `${pickRandom(['ɴα∂ια вσт ву мυʀѕι∂-χмℓ', 'ɴα∂ια вσт ву мυʀѕι∂-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/51ceb8f50dd08b7dfdf58.jpg')).buffer(),}}  
+ ptt: true, contextInfo:{ externalAdReply: {title: `Aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/a4d1610ded418d1269ebb.jpg')).buffer(),}}  
       }) 
  } catch (e) {
     conn.reply(m.chat, 'мααƒ, мєɴυ ѕααт ιɴι ѕє∂αɴg єʀʀσʀ', m)
