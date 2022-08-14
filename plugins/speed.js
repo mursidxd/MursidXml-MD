@@ -26,7 +26,7 @@ let handler = async (m, { conn, usedPrefix }) => {
     surface : 1,
     message: `ѕρєє∂ тєѕт ${await conn.getName(conn.user.jid)}`, 
     orderTitle: ``,
-    thumbnail: await (await fetch('https://telegra.ph/file/6e083ec916dce9821fc2e.jpg')).buffer(), //Gambarnye
+    thumbnail: await (await fetch('https://telegra.ph/file/a4d1610ded418d1269ebb.jpg')).buffer(), //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
     }
     }
@@ -91,7 +91,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                  sourceUrl: 'https://instagram.com/mursid.st', 
              title: `Merespon dalam ${speed} milidetik`, 
              body: 'мυʀѕι∂ вσт-χмℓ', 
-           thumbnail:  await (await fetch(global.image + 'Ping')).buffer()
+           thumbnail:  await (await fetch(fla + 'Ping')).buffer()
              } 
       } 
      }) 
