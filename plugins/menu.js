@@ -36,12 +36,14 @@ const defaultMenu = {
   body: '│• %cmd %islimit %isPremium',
   footer: '└─────────⬣\n',
   after: `
-┌──  *BIG THANKS TO*  ───⬣
+┌──  *SPESIAL BIG THANKS TO*  ───⬣
 │• Allah SWT
 │• Nurutomo as wabot-aq
 │• Istikmal as BochilGaming
 │• Ariffb as stikerin
 │• Aguz Familia
+│• Ziv San
+│• Nayla Hanifah
 │• Syahrul
 │• Vanesha Desu
 │• Aniq12
@@ -49,9 +51,8 @@ const defaultMenu = {
 │• Rasell Comel
 │• Faudzan
 │• Krisna
-│• Nayla Hanifah
  | • Krizynofc
-│• Ziv San
+│• Kurukuumd
 │• Mursid S
 │• All Creator Bot
 └─────────────⬣
@@ -335,10 +336,10 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ʀυℓєѕ`, `${_p}rules`, `ᴅσɴαѕι`, `${_p}donasi`)
     await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
-    await conn.send2ButtonDoc(m.chat, text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Aktif selama* : *${uptime}*\n*Waktu : ${time}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
+    await conn.send2ButtonDoc(m.chat, text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Aktif Selama* : *${uptime}*\n*${date}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
     conn.sendFile(m.chat, bzz, 'anuu.mp3', null, m, true, { 
  type: 'audioMessage',  
- ptt: true, contextInfo:{ externalAdReply: {title: `Aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/a4d1610ded418d1269ebb.jpg')).buffer(),}}  
+ ptt: true, contextInfo:{ externalAdReply: {title: `aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/a4d1610ded418d1269ebb.jpg')).buffer(),}}  
       }) 
  } catch (e) {
     conn.reply(m.chat, 'мααƒ, мєɴυ ѕααт ιɴι ѕє∂αɴg єʀʀσʀ', m)
