@@ -8,10 +8,10 @@ handler.all = async function (m) {
         console.log('sw cok')
     }
     let { isBanned } = db.data.chats[m.chat]
-    let { banned } = db.data.users[m.sender]
+    let { banned } = db.data.home[m.sender]
     let { group } = db.data.settings[this.user.jid]
     let setting = db.data.settings[this.user.jid]
-    let user = global.db.data.users[m.sender]
+    let user = global.db.data.home[m.sender]
     
   
     
@@ -42,11 +42,15 @@ handler.all = async function (m) {
         await this.sendButton(m.chat, !(m.isGroup || m.isPrems) && group ? 'hanya grup' : isBanned ? 'chat banned' : banned ? 'user banned' : 'aktif', wm, !(m.isGroup || m.isPrems) && group ? 'donasi' : isBanned ? 'unban' : banned ? 'minta owner kalo mau di unban' : 'donasi', !(m.isGroup || m.isPrems) && group ? '.donasi' : isBanned ? '.unban' : banned ? '.owner' : '.donasi', m)
     }
     
+    //Ketika Owner Di Tag
+    if (/^@6288233832771$/i.test(m.text)) {
+        await this.sendFile(m.chat, 'http://fzcdn.cf/file/yM9i0f3lFTY3TCwpTsLi.webp', '', '', m) //By Ziv San
+        
 // update status
     if (new Date() * 1 - setting.status > 1000) {
         let _uptime = process.uptime() * 1000
         let uptime = clockString(_uptime)
-        await this.setBio(`Aktif selama ${uptime} |⁩ Mode : ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} | By Mursid S`).catch(_ => _)
+        await this.setBio(`Aktif selama ${uptime} |⁩ Mode : ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} | BY MURSID XML`).catch(_ => _)
         setting.status = new Date() * 1
     }
 
