@@ -558,7 +558,7 @@ By _Zainudin_
 }
 
 handler.help = ['virtex2']
-handler.tags = ['premium', 'premium']
+handler.tags = ['premium']
 handler.command = /^(virtex2)$/i
 
 handler.exp = 150
