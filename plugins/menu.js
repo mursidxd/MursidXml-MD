@@ -30,7 +30,7 @@ const defaultMenu = {
 │ Terlebih dahulu, jangan asal culik
 │ Bot ke dalam grup jika melanggar
 │ Ban permanen & Blok permanen
-┗━━━━━━━༺༻━━━━━━━━⬣`
+┗━━━━━━━༺༻━━━━━━━⬣`
 %readmore`.trim(),
   header: '┏━━「 %category 」━━⬣',
   body: '┃• %cmd %islimit %isPremium',
