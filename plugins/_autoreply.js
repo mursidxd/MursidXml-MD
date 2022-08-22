@@ -46,7 +46,7 @@ handler.all = async function (m) {
     if (new Date() * 1 - setting.status > 1000) {
         let _uptime = process.uptime() * 1000
         let uptime = clockString(_uptime)
-        await this.setBio(`Aktif selama ${uptime} |⁩ Mode : ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} | By Mursid S`).catch(_ => _)
+        await this.setBio(`Aktif selama ${uptime} |⁩ Mode : ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} | BY MURSID XML`).catch(_ => _)
         setting.status = new Date() * 1
     }
 
