@@ -9,5 +9,6 @@ handler.tags = ['premium]
 handler.command = /^(virtex3)$/i
 
 handler.exp = 150
+handler.premium = true
 
 module.exports = handler
