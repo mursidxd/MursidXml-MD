@@ -1,26 +1,21 @@
-let handler = async (m, { conn }) => {
-	
-	// Link Script jgn di ganti ya pliss
-    // Kalo mau masukin github kamu tinggal add aja link githubnya tapi jangan di hapus sumber script!
-    // Jangan Ngeyell..
-    // Kalo ngeyel gk bakal gw up sc lgi.
-    
-    let txt = `
-Bot ini menggunakan script github
+let fetch = require('node-fetch')
+let handler = async (m, { conn }) => conn.sendButtonLoc(m.chat, 'https://telegra.ph/file/647d068f1ab70864a7fc7.jpg',
+`Hi Kak @${m.sender.split('@')[0]} 
 
-https://github.com/FokusDotId/Family-MD.git
+◪ *SCRIPT BOT*
+│ *Script*
+│ • https://github.com/FokusDotId/Family-MD
+│ *Github* 
+│ • https://github.com/FokusDotId
+└─────────═┅═─────────⬣
+`,`📮 *N o t e :* 
+• Pliss follow dan kasih start nya ya pak
+• Dilarang reupload tanpa izin dari pemilik script
 
-pliss follow dan kasih ✨⭐⭐🌟 ya pak!
-
-My Github: https://github.com/FokusDotId
-
-`
-     conn.reply(m.chat, txt, m)
-}
+Official By @${'0'.split('@')[0]}
+Created By @${`${global.owner[0]}`.split('@')[0]}`, 'Menu', '#menu')
 handler.help = ['sourcecode']
 handler.tags = ['info']
-handler.command = /^(sc(ript(bot)?)?|sourcecode)$/i
+handler.command = /^(sourcecode|sc|scbot|script|github)$/i
 
 module.exports = handler
-
-
