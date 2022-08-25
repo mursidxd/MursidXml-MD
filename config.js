@@ -34,6 +34,7 @@ global.APIKeys = { // APIKey Here
   'https://api.zeks.me': 'apikeylu',
   'https://pencarikode.xyz': 'apikeylu',
   'https://hardianto.xyz': 'hardianto',
+  'https://leyscoders-api.herokuapp.com': 'MIMINGANZ',
   'https://leyscoders-api.herokuapp.com': 'apikeylu',
   'https://api.adiofficial.xyz': 'apikey lu'
 }
