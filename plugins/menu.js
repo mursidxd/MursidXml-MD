@@ -5,10 +5,10 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┏━━━━━━༺༻━━━━━━━⬣`
+┌───────────────────⬣
 │         мυʀѕι∂ вσт-χмℓ
-┗┬────────────────⬣
-   │    「 𝗜𝗡𝗙𝗢 𝗨𝗦𝗘𝗥 」
+└┬────────────────彡
+   │        「 𝗨𝗦𝗘𝗥 𝗕𝗢𝗧 」
 ┌┤• *Tersisa* : %limit Limit
 ││• *Role* : %role
 ││• *Level* : %level 
@@ -17,24 +17,24 @@ const defaultMenu = {
 ││• *Tanggal* : %week %weton, %date
 ││• *Tanggal Islam* : %dateIslamic
 ││• *Waktu* : %time
-│┗────────────────⬣
-│        「 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢 」
+│└────────────────彡
+│           「 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢 」
 │• *Runtime* : %uptime / %muptime
 │• *Bailyes Version* : 4.2.0
 │• *Database* : %rtotalreg dari %totalreg
 │• *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-├─────────────────⬣
+├─────────────────彡
 │ *Note* : 
 │ Untuk memasukan bot ke grup
 │ Harap izin dulu sama owner bot
 │ Terlebih dahulu, jangan asal culik
 │ Bot ke dalam grup jika melanggar
-│ Ban permanen & Blok permanen
-┗━━━━━━━༺༻━━━━━━━⬣`
+│ Ban permanen & Blok permanen.
+└───────────────────⬣
 %readmore`.trim(),
-  header: '┏━━「 %category 」━━⬣',
-  body: '┃• %cmd %islimit %isPremium',
-  footer: '┗━━━༺༻━━━⬣\n',
+  header: '┌──「 %category 」──⬣',
+  body: '│• %cmd %islimit %isPremium',
+  footer: '└───༺༻───⬣\n',
   after: `
 ┌──  *SPESIAL BIG THANKS TO*  ───⬣
 │• Allah SWT
@@ -51,7 +51,7 @@ const defaultMenu = {
 │• Rasell Comel
 │• Faudzan
 │• Krisna
-│• Krizynofc
+ | • Krizynofc
 │• Kurukuumd
 │• Mursid S
 │• All Creator Bot
@@ -215,35 +215,51 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
         enabled: !plugin.disabled,
       }
     })
+    let ziv = {
+    key : {
+    remoteJid: 'status@broadcast',
+    participant : '0@s.whatsapp.net'
+    },
+    message: {
+    orderMessage: {
+    itemCount : 9998282719181899999,
+    status: 404,
+    surface : 404,
+    message: `мυʀѕι∂ вσт-χмℓ`,
+    orderTitle: '',
+    thumbnail: await (await fetch('https://telegra.ph/file/3f4964581fe4c9f6d5b01.jpg')).buffer(),  //Gambarnye
+    sellerJid: '0@s.whatsapp.net' 
+    }
+    }
+    }
     if (teks == '404') {
-    	      let tksk =  ` ┏━━━━━━━༺༻━━━━━━━⬣`
+    	      let tksk =  ` ┌───────────────────⬣
  │         *мυʀѕι∂ вσт-χмℓ*
- ┗┬─────────────────⬣
+ └┬─────────────────彡
     │       *「 USER INFO  」*
  ┌┤• *Nama* : ${name}
  ││• *Exp* : ${exp}
  ││• *Limit* : ${limit}
  ││• *Level* : ${level}
  ││• *Rank* : ${role}
- │├─────────────────⬣
  ││• *Umur* : ${age == '-1' ? 'Belum Daftar' : age}   
  ││• *Link* : wa.me/${m.sender.split`@`[0]}
  ││• *Money* : ${money}
  ││• *Status* : ${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner' : 'User'}
  ││• *Run Bot* : Panel/VPS
- │├─────────────────⬣
+ │├─────────────────彡
  ││• *Hari* : ${week}
  ││• *Weton* : ${weton}
  ││• *Tanggal* : ${date}
  ││• *Waktu* : ${time}
  ││• *Tanggal Islam* : ${dateIslamic}
- │┗─────────────────⬣
+ │└─────────────────彡
  │• *Baterai* : ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Charger' : ''}` : 'Tidak Diketahui'} 
  │• *Runtime* : ${uptime} 
  │• *Bot Name* : ${conn.user.name} 
  │• *Name Owner* : Mursid S
  │• *Register* : ${totalreg} 
- ┗━━━━━━━༺༻━━━━━━━⬣`
+ └───────────────────⬣`
       let judul = `${global.ucapan}, ${name}`.trim()
       const sections = [
       {
@@ -282,7 +298,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
       buttonText: "Click Here",
       sections
     }
-    return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
+    return conn.sendMessage(m.chat, listMessage, { quoted: ziv, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
     
     }
 
@@ -336,10 +352,11 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ʀυℓєѕ`, `${_p}rules`, `ᴅσɴαѕι`, `${_p}donasi`)
     await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
-    await conn.send2ButtonDoc(m.chat, text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif Selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
-    conn.sendFile(m.chat, bzz, 'anuu.mp3', null, m, true, { 
+    //await conn.send2ButtonDoc(m.chat, text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/b84f03c68244ae00e35d0.jpg')).buffer(), text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif Selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
+conn.sendFile(m.chat, bzz, 'anuu.mp3', null, m, true, { 
  type: 'audioMessage',  
- ptt: true, contextInfo:{ externalAdReply: {title: `aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/a4d1610ded418d1269ebb.jpg')).buffer(),}}  
+ ptt: true, contextInfo:{ externalAdReply: {title: `aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/5b9f73ca7203fc368086e.jpg')).buffer(),}}  
       }) 
  } catch (e) {
     conn.reply(m.chat, 'мααƒ, мєɴυ ѕααт ιɴι ѕє∂αɴg єʀʀσʀ', m)
