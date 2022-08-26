@@ -8,7 +8,7 @@ let handler = async(m, { conn }) => {
 	await conn.sendKontak(m.chat, kontak2, fkontak, { contexInfo: { forwardingScore: 99999, isForwarded: true } })
 	]
 	await delay(100)
-  return conn.sendMessage(m.chat, { text: `ʜᴀʟᴏ ᴋᴀᴋ @${await m.sender.split('@')[0]}, ɪᴛᴜ ɴᴏᴍᴇʀ ᴏᴡɴᴇʀᴋᴜ ʏᴀ, ᴊɪᴋᴀ ᴍᴀᴜ ᴄʜᴀᴛ ᴅɪ ʙɪᴀsᴀᴋᴀɴ ᴜᴄᴀᴘɪɴ sᴀʟᴀᴍ ʏᴀ`, mentions: [m.sender] }, { quoted: conn.p[id][0] })
+  return conn.sendMessage(m.chat, { text: `ʜᴀʟᴏ ᴋᴀᴋ @${await m.sender.split('@')[0]}, ɪᴛᴜ ɴᴏᴍᴇʀ ᴏᴡɴᴇʀᴋᴜ ʏᴀ, ᴊɪᴋᴀ ᴍᴀᴜ ᴄʜᴀᴛ ᴅɪ ʙɪᴀsᴀᴋᴀɴ ᴜᴄᴀᴘɪɴ sᴀʟᴀᴍ ᴅᴜʟᴜ ʏᴀ ᴋᴀᴋ.`, mentions: [m.sender] }, { quoted: conn.p[id][0] })
   await delay(100)
   return delete conn.p[id]
 }
