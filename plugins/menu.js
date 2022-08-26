@@ -27,9 +27,9 @@ const defaultMenu = {
 │ *Note* : 
 │ Untuk memasukan bot ke grup
 │ Harap izin dulu sama owner bot
-│ Terlebih dahulu, jangan asal culik
-│ Bot ke dalam grup jika melanggar
-│ Ban permanen & Blok permanen.
+│ Terlebih dahulu, beberapa fitur
+│ Bot Masih banyak yang error
+│ Harap di maklumi ya kak.
 └───────────────────⬣
 %readmore`.trim(),
   header: '┌──「 %category 」──⬣',
