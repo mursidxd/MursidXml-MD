@@ -27,9 +27,9 @@ const defaultMenu = {
 │ *Note* : 
 │ Untuk memasukan bot ke grup
 │ Harap izin dulu sama owner bot
-│ Terlebih dahulu, beberapa fitur
-│ Bot Masih banyak yang error
-│ Harap di maklumi ya kak.
+│ Terlebih dahulu, jangan asal culik
+│ Bot ke dalam grup jika melanggar
+│ Ban permanen & Blok permanen.
 └───────────────────⬣
 %readmore`.trim(),
   header: '┌──「 %category 」──⬣',
@@ -227,79 +227,18 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     surface : 404,
     message: `мυʀѕι∂ вσт-χмℓ`,
     orderTitle: '',
-    thumbnail: await (await fetch('https://telegra.ph/file/3f4964581fe4c9f6d5b01.jpg')).buffer(),  //Gambarnye
+    thumbnail: await (await fetch('https://telegra.ph/file/c444c0a2b0c63639ca9b2.jpg')).buffer(),  //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
     }
     }
     }
     if (teks == '404') {
-    	      let tksk =  ` ┌───────────────────⬣
- │         *мυʀѕι∂ вσт-χмℓ*
- └┬─────────────────彡
-    │       *「 USER INFO  」*
- ┌┤• *Nama* : ${name}
- ││• *Exp* : ${exp}
- ││• *Limit* : ${limit}
- ││• *Level* : ${level}
- ││• *Rank* : ${role}
- ││• *Umur* : ${age == '-1' ? 'Belum Daftar' : age}   
- ││• *Link* : wa.me/${m.sender.split`@`[0]}
- ││• *Money* : ${money}
- ││• *Status* : ${global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) ? 'Owner' : 'User'}
- ││• *Run Bot* : Panel/VPS
- │├─────────────────彡
- ││• *Hari* : ${week}
- ││• *Weton* : ${weton}
- ││• *Tanggal* : ${date}
- ││• *Waktu* : ${time}
- ││• *Tanggal Islam* : ${dateIslamic}
- │└─────────────────彡
- │• *Baterai* : ${conn.battery != undefined ? `${conn.battery.value}% ${conn.battery.live ? '🔌 Charger' : ''}` : 'Tidak Diketahui'} 
- │• *Runtime* : ${uptime} 
- │• *Bot Name* : ${conn.user.name} 
- │• *Name Owner* : Mursid S
- │• *Register* : ${totalreg} 
- └───────────────────⬣`
-      let judul = `${global.ucapan}, ${name}`.trim()
-      const sections = [
-      {
-        title: 'ℓιѕт мєɴυ мυʀѕι∂ вσт-χмℓ',
-        rows: [
-          { title: 'sᴇᴍᴜᴀ ᴘᴇʀɪɴᴛᴀʜ', rowId: `${_p}? all` },
-          { title: 'ɢᴀᴍᴇ', rowId: `${_p}? game` },
-          { title: 'ᴇxᴘ', rowId: `${_p}? xp` },
-          { title: 'sᴛɪᴄᴋᴇʀ', rowId: `${_p}? stiker` },
-          { title: 'ᴋᴇʀᴀɴɢ ᴀᴊᴀɪʙ', rowId: `${_p}? kerangajaib` },
-          { title: 'ǫᴜᴏᴛᴇs', rowId: `${_p}? quotes` },
-          { title: 'ɢʀᴜᴘ', rowId: `${_p}? grup` },
-          { title: 'ᴘʀᴇᴍɪᴜᴍ', rowId: `${_p}? premium` },
-          { title: 'ɪɴᴛᴇʀɴᴇᴛ', rowId: `${_p}? internet` },
-          { title: 'ᴀɴᴏɴʏᴍᴏᴜs', rowId: `${_p}? anonymous` },
-          { title: 'ɴᴜʟɪs & ʟᴏɢᴏ', rowId: `${_p}? nulis` },
-          { title: 'ᴅᴏᴡɴʟᴏᴀᴅᴇʀ', rowId: `${_p}? downloader` },
-          { title: 'ᴛᴏᴏʟs', rowId: `${_p}? tools` },
-          { title: 'ғᴜɴ', rowId: `${_p}? fun`},
-          { title: 'ᴅᴀᴛᴀʙᴀsᴇ', rowId: `${_p}? database` },
-          { title: 'ᴠᴏᴛᴇ & ᴀʙsᴇɴ', rowId: `${_p}? vote` },
-          { title: "ᴀʟ-ǫᴜʀ\'ᴀɴ", rowId: `${_p}? quran` },
-          { title: 'ᴘᴇɴɢᴜʙᴀʜ sᴜᴀʀᴀ', rowId: `${_p}? audio` },
-          { title: 'ᴊᴀᴅɪ ʙᴏᴛ', rowId: `${_p}? jadibot` },
-          { title: 'ɪɴғᴏ', rowId: `${_p}? info` },
-          { title: 'ᴛᴀɴᴘᴀ ᴋᴀᴛᴇɢᴏʀɪ', rowId: `${_p}? tanpakategori` },
-          { title: 'ᴏᴡɴᴇʀ', rowId: `${_p}? owner` },
-        ]
-      }
-    ]
-    const listMessage = {
-      text: tksk,
-      footer: wm,
-      mentions: await conn.parseMention(judul),
-      title: judul,
-      buttonText: "Click Here",
-      sections
-    }
-    return conn.sendMessage(m.chat, listMessage, { quoted: ziv, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }})
+    	      	let ori = `Hi Kak, @${m.sender.split`@`[0]}
+ 
+Saya Adalah Cute Bot Salah Satu Bot Whatsapp Yang Siap Membantu Kamu Mempermudah Sesuatu Seperti Membuat Sticker Dan Lainnya, Kalo Kamu Mau Request Fitur Silahkan Ketik #request Pesan Atau Fitur Yang Kamu Inginkan!`
+return conn.send2ButtonLoc(m.chat, 'https://telegra.ph/file/c444c0a2b0c63639ca9b2.jpg', ori, `Note : Jika Anda Menggunakan Wa Lama Atau Mod Dan Tombol Itu Tidak Terlihat Langsung Ketik ${_p}simplemenu`, 'COMMAND', '.simplemenu', 'DONATION', m)
     
+
     }
 
     let groups = {}
@@ -353,10 +292,13 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     //await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ʀυℓєѕ`, `${_p}rules`, `ᴅσɴαѕι`, `${_p}donasi`)
     await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
     //await conn.send2ButtonDoc(m.chat, text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
-    await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/b84f03c68244ae00e35d0.jpg')).buffer(), text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif Selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
-conn.sendFile(m.chat, bzz, 'anuu.mp3', null, m, true, { 
+    await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/c444c0a2b0c63639ca9b2.jpg')).buffer(), text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif Selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
+await conn.sendFile(m.chat, 'https://file.io/wXJOQXNWlh63', 'anuu.mp3', null, m, true, { 
  type: 'audioMessage',  
- ptt: true, contextInfo:{ externalAdReply: {title: `Bot aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/b3ce1b26563ba0f764736.jpg')).buffer(),}}  
+ ptt: true, 
+seconds: 9999,
+fileLength: 99999 })
+ ptt: true, contextInfo:{ externalAdReply: {title: `aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/c444c0a2b0c63639ca9b2.jpg')).buffer(),}}  
       }) 
  } catch (e) {
     conn.reply(m.chat, 'мααƒ, мєɴυ ѕααт ιɴι ѕє∂αɴg єʀʀσʀ', m)
