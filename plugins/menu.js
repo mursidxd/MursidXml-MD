@@ -18,18 +18,17 @@ const defaultMenu = {
 ││• *Tanggal Islam* : %dateIslamic
 ││• *Waktu* : %time
 │└────────────────彡
-│           「 𝗕𝗢𝗧 𝗜𝗡𝗙𝗢 」
 │• *Runtime* : %uptime / %muptime
-│• *Bailyes Version* : 4.2.0
+│• *Bailyes Version* : Multi Device 4.5.0
+│• *Server* : Panel/RDP
 │• *Database* : %rtotalreg dari %totalreg
 │• *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 ├─────────────────彡
-│ *Note* : 
-│ Untuk memasukan bot ke grup
-│ Harap izin dulu sama owner bot
-│ Terlebih dahulu, jangan asal culik
-│ Bot ke dalam grup jika melanggar
-│ Ban permanen & Blok permanen.
+│• *Nama Owner* : Mursid S
+│• *Asal Kota* : Yogyakarta
+│• *Umur* : 18 Tahun
+│• *Ulang Tahun* : 25 Juli 2004
+│• *Hobi* : Coding, suka kamu, gamers
 └───────────────────⬣
 %readmore`.trim(),
   header: '┌──「 %category 」──⬣',
@@ -227,16 +226,16 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     surface : 404,
     message: `мυʀѕι∂ вσт-χмℓ`,
     orderTitle: '',
-    thumbnail: await (await fetch('https://telegra.ph/file/c444c0a2b0c63639ca9b2.jpg')).buffer(),  //Gambarnye
+    thumbnail: await (await fetch('https://telegra.ph/file/0d4587ebe9e501bc2d1b8.jpg')).buffer(),  //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
     }
     }
     }
     if (teks == '404') {
-    	      	let ori = `Hi Kak, @${m.sender.split`@`[0]}
+    	      	let ori = `Hay kak, @${m.sender.split`@`[0]}
  
-Saya Adalah Cute Bot Salah Satu Bot Whatsapp Yang Siap Membantu Kamu Mempermudah Sesuatu Seperti Membuat Sticker Dan Lainnya, Kalo Kamu Mau Request Fitur Silahkan Ketik #request Pesan Atau Fitur Yang Kamu Inginkan!`
-return conn.send2ButtonLoc(m.chat, 'https://telegra.ph/file/c444c0a2b0c63639ca9b2.jpg', ori, `Note : Jika Anda Menggunakan Wa Lama Atau Mod Dan Tombol Itu Tidak Terlihat Langsung Ketik ${_p}simplemenu`, 'COMMAND', '.simplemenu', 'DONATION', m)
+мυʀѕι∂ вσт-χмℓ adalah bot whatsapp yang di bangun dengan Nodejs, dengan menggunakan server yang kencang, tapi tidak terlalu kencang-kencang banget.`
+return conn.send2ButtonImg(m.chat, 'https://telegra.ph/file/0d4587ebe9e501bc2d1b8.jpg', ori, `мυʀѕι∂ вσт-χмℓ`, 'ѕємυα ρєʀιɴтαн', '.? all', 'ᴅσɴαѕι', '.donasi', m)
     
 
     }
@@ -292,13 +291,14 @@ return conn.send2ButtonLoc(m.chat, 'https://telegra.ph/file/c444c0a2b0c63639ca9b
     //await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ʀυℓєѕ`, `${_p}rules`, `ᴅσɴαѕι`, `${_p}donasi`)
     await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
     //await conn.send2ButtonDoc(m.chat, text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
-    await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/c444c0a2b0c63639ca9b2.jpg')).buffer(), text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif Selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
-await conn.sendFile(m.chat, 'https://file.io/wXJOQXNWlh63', 'anuu.mp3', null, m, true, { 
+    await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/035f86480c773d7e9b534.jpg')).buffer(), text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif Selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
+await conn.sendFile(m.chat, fs.readFileSync('./anuu.mp3'), 'anuu.mp3', null, m, true, { 
  type: 'audioMessage',  
  ptt: true, 
 seconds: 9999,
-fileLength: 99999 })
- ptt: true, contextInfo:{ externalAdReply: {title: `aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/c444c0a2b0c63639ca9b2.jpg')).buffer(),}}  
+fileLength: 99999,
+ ptt: true, contextInfo: { forwardingScore: 999, isForwarded: true }
+ externalAdReply: {title: `aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/f332e43a9fddef017cd30.jpg')).buffer(),}}  
       }) 
  } catch (e) {
     conn.reply(m.chat, 'мααƒ, мєɴυ ѕααт ιɴι ѕє∂αɴg єʀʀσʀ', m)
