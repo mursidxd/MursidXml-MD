@@ -20,7 +20,7 @@ const defaultMenu = {
 │└────────────────彡
 │• *Runtime* : %uptime / %muptime
 │• *Bailyes Version* : Multi Device 4.5.0
-│• *Server* : Panel/RDP
+│• *Server* : Panel/usr
 │• *Database* : %rtotalreg dari %totalreg
 │• *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
 ├─────────────────彡
@@ -297,8 +297,7 @@ await conn.sendFile(m.chat, fs.readFileSync('./anuu.mp3'), 'anuu.mp3', null,�
  ptt: true, 
 seconds: 9999,
 fileLength: 99999,
- ptt: true, contextInfo: { forwardingScore: 999, isForwarded: true }
- externalAdReply: {title: `aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/f332e43a9fddef017cd30.jpg')).buffer(),}}  
+ ptt: true, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply: {title: `aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/f332e43a9fddef017cd30.jpg')).buffer(),}}  
       }) 
  } catch (e) {
     conn.reply(m.chat, 'мααƒ, мєɴυ ѕααт ιɴι ѕє∂αɴg єʀʀσʀ', m)
