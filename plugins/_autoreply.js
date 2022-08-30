@@ -8,10 +8,10 @@ handler.all = async function (m) {
         console.log('sw cok')
     }
     let { isBanned } = db.data.chats[m.chat]
-    let { banned } = db.data.home[m.sender]
+    let { banned } = db.data.users[m.sender]
     let { group } = db.data.settings[this.user.jid]
     let setting = db.data.settings[this.user.jid]
-    let user = global.db.data.home[m.sender]
+    let user = global.db.data.users[m.sender]
     
   
     
@@ -46,7 +46,7 @@ handler.all = async function (m) {
     if (new Date() * 1 - setting.status > 1000) {
         let _uptime = process.uptime() * 1000
         let uptime = clockString(_uptime)
-        await this.setBio(`Aktif selama ${uptime} |⁩ Mode : ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} | BY MURSID XML`).catch(_ => _)
+        await this.setBio(`Aktif selama ${uptime} |⁩ Mode : ${global.opts['self'] ? 'Private' : setting.groupOnly ? 'Hanya Grup' : 'Publik'} | ву мυʀѕι∂-χмℓ`).catch(_ => _)
         setting.status = new Date() * 1
     }
 
