@@ -6,50 +6,49 @@ let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
 ┌───────────────────⬣
-│         мυʀѕι∂ вσт-χмℓ
-└┬────────────────彡
+│           мυʀѕι∂ вσт-χмℓ
+└┬────────────────⬡
    │        「 𝗨𝗦𝗘𝗥 𝗕𝗢𝗧 」
-┌┤• *Tersisa* : %limit Limit
-││• *Role* : %role
-││• *Level* : %level 
-││• *Exp* : %totalexp XP 
-││• *Hari* : %week
-││• *Tanggal* : %week %weton, %date
-││• *Tanggal Islam* : %dateIslamic
-││• *Waktu* : %time
-│└────────────────彡
-│• *Runtime* : %uptime / %muptime
-│• *Bailyes Version* : Multi Device 4.5.0
-│• *Server* : Panel/usr
-│• *Database* : %rtotalreg dari %totalreg
-│• *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-├─────────────────彡
-│• *Nama Owner* : Mursid S
-│• *Asal Kota* : Yogyakarta
-│• *Umur* : 18 Tahun
-│• *Ulang Tahun* : 25 Juli 2004
-│• *Hobi* : Coding, suka kamu, gamers
+┌┤⬡ *Tersisa* : %limit Limit
+││⬡ *Role* : %role
+││⬡ *Level* : %level 
+││⬡ *Exp* : %totalexp XP 
+││⬡ *Hari* : %week
+││⬡ *Tanggal* : %week %weton, %date
+││⬡ *Tanggal Islam* : %dateIslamic
+││⬡ *Waktu* : %time
+│└────────────────⬡
+│⬡ *Runtime* : %uptime / %muptime
+│⬡ *Bailyes Version* : Multi Device 4.5.0
+│⬡ *Server* : Panel/usr
+│⬡ *Database* : %rtotalreg dari %totalreg
+│⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+├─────────────────⬡
+│⬡ *Nama Owner* : Mursid S
+│⬡ *Asal Kota* : Yogyakarta
+│⬡ *Umur* : 18 Tahun
+│⬡ *Ulang Tahun* : 25 Juli 2004
+│⬡ *Hobi* : Coding, suka kamu, gamers
 └───────────────────⬣
 %readmore`.trim(),
   header: '┌──「 %category 」──⬣',
-  body: '│• %cmd %islimit %isPremium',
-  footer: '└───༺༻───⬣\n',
+  body: '│⬡ %cmd %islimit %isPremium',
+  footer: '└─────────⬣\n',
   after: `
-┌──  *SPESIAL BIG THANKS TO*  ───⬣
+┌──  *BIG THANKS TO*  ───⬣
 │• Allah SWT
 │• Nurutomo as wabot-aq
 │• Istikmal as BochilGaming
 │• Ariffb as stikerin
 │• Aguz Familia
 │• Ziv San
+│• the.sad.boy01
 │• Nayla Hanifah
 │• Syahrul
 │• Vanesha Desu
 │• Aniq12
 │• Amirul Dev
 │• Rasell Comel
-│• Faudzan
-│• Krisna
  | • Krizynofc
 │• Kurukuumd
 │• Mursid S
