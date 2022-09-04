@@ -247,7 +247,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     	      	let ori = `Hay kak, @${m.sender.split`@`[0]}
  
 мυʀѕι∂ вσт-χмℓ adalah bot whatsapp yang di bangun dengan Nodejs, dengan menggunakan server yang kencang, tapi tidak terlalu kencang-kencang banget.`
-return conn.send2ButtonImg(m.chat, 'https://telegra.ph/file/0d4587ebe9e501bc2d1b8.jpg', ori, `мυʀѕι∂ вσт-χмℓ`, 'ѕємυα ρєʀιɴтαн', '.? all', 'ᴅσɴαѕι', '.donasi', m)
+return conn.send2ButtonImg(m.chat, 'https://telegra.ph/file/244d773f1194984cbfe51.jpg', ori, `мυʀѕι∂ вσт-χмℓ`, 'ѕємυα ρєʀιɴтαн', '.? all', 'ᴅσɴαѕι', '.donasi', m)
     
 
     }
