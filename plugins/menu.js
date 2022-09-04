@@ -7,7 +7,7 @@ const defaultMenu = {
   before: `
 ┌───────────────────⬣
 │           мυʀѕι∂ вσт-χмℓ
-└┬────────────────⬡
+└┬────────────────✽
    │        「 𝗨𝗦𝗘𝗥 𝗕𝗢𝗧 」
 ┌┤⬡ *Tersisa* : %limit Limit
 ││⬡ *Role* : %role
@@ -17,13 +17,13 @@ const defaultMenu = {
 ││⬡ *Tanggal* : %week %weton, %date
 ││⬡ *Tanggal Islam* : %dateIslamic
 ││⬡ *Waktu* : %time
-│└────────────────⬡
-│⬡ *Runtime* : %uptime / %muptime
+│└────────────────✽
+│⬡ *Runtime* : %uptime
 │⬡ *Bailyes Version* : Multi Device 4.5.0
-│⬡ *Server* : Panel/usr
+│⬡ *Server* : Panel/RDP
 │⬡ *Database* : %rtotalreg dari %totalreg
-│⬡ *Memory Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-├─────────────────⬡
+│⬡ *Storage Used* : ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+├─────────────────✽
 │⬡ *Nama Owner* : Mursid S
 │⬡ *Asal Kota* : Yogyakarta
 │⬡ *Umur* : 18 Tahun
@@ -172,6 +172,19 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     // Offset -420 is 18.00
     // Offset    0 is  0.00
     // Offset  420 is  7.00
+    
+    /*********************** HITUNG MUNDUR ************************/
+    const ultah = new Date('july 25, 2023 23:59:59')
+    const sekarat = new Date().getTime() 
+    const Kurang = ultah - sekarat
+    const ohari = Math.floor( Kurang / (1000 * 60 * 60 * 24));
+    const ojam = Math.floor( Kurang % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+    const onet = Math.floor( Kurang % (1000 * 60 * 60) / (1000 * 60))
+    const detek = Math.floor( Kurang % (1000 * 60) / 1000)
+    // Pemasangan ${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik
+    
+    
+    
     let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5]
     let week = d.toLocaleDateString(locale, { weekday: 'long' })
     let date = d.toLocaleDateString(locale, {
@@ -288,15 +301,15 @@ return conn.send2ButtonImg(m.chat, 'https://telegra.ph/file/0d4587ebe9e501bc2d1b
     }
     text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
     //await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ʀυℓєѕ`, `${_p}rules`, `ᴅσɴαѕι`, `${_p}donasi`)
-    await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'BY MURSID (+6288233832771)', 'status@broadcast')
+    await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'ву мυʀѕι∂-χмℓ (+6288233832771)', 'status@broadcast')
     //await conn.send2ButtonDoc(m.chat, text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
-    await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/035f86480c773d7e9b534.jpg')).buffer(), text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif Selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/21af635c38cac861208c6.jpg')).buffer(), text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif Selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
 await conn.sendFile(m.chat, fs.readFileSync('./anuu.mp3'), 'anuu.mp3', null, m, true, { 
  type: 'audioMessage',  
  ptt: true, 
 seconds: 9999,
 fileLength: 99999,
- ptt: true, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply: {title: `aktif selama : ${uptime}`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/f332e43a9fddef017cd30.jpg')).buffer(),}}  
+ ptt: true, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply: {title: `υℓαɴg тαнυɴ мυʀѕι∂ ${ohari} нαʀι ${ojam} ᴊαм ${onet} мᴇɴιт ${detek} ᴅᴇтιк`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/f332e43a9fddef017cd30.jpg')).buffer(),}}  
       }) 
  } catch (e) {
     conn.reply(m.chat, 'мααƒ, мєɴυ ѕααт ιɴι ѕє∂αɴg єʀʀσʀ', m)
