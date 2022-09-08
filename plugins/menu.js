@@ -238,7 +238,7 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     surface : 404,
     message: `мυʀѕι∂ вσт-χмℓ`,
     orderTitle: '',
-    thumbnail: await (await fetch('https://telegra.ph/file/0d4587ebe9e501bc2d1b8.jpg')).buffer(),  //Gambarnye
+    thumbnail: await (await fetch('https://telegra.ph/file/f7a5c9629f27bd8fd920f.jpg')).buffer(),  //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
     }
     }
@@ -246,8 +246,8 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     if (teks == '404') {
     	      	let ori = `Hay kak, @${m.sender.split`@`[0]}
  
-мυʀѕι∂ вσт-χмℓ adalah bot whatsapp yang di bangun dengan Nodejs, dengan menggunakan server yang kencang, tapi tidak terlalu kencang-kencang banget.`
-return conn.send2ButtonImg(m.chat, 'https://telegra.ph/file/244d773f1194984cbfe51.jpg', ori, `мυʀѕι∂ вσт-χмℓ`, 'ѕємυα ρєʀιɴтαн', '.? all', 'ᴅσɴαѕι', '.donasi', m)
+мυʀѕι∂ вσт-χмℓ adalah bot whatsapp yang di bangun dengan Nodejs, dengan menggunakan server rdp yang sangat kencang, tapi tidak terlalu kencang-kencang banget.`
+return conn.send2ButtonImg(m.chat, 'https://telegra.ph/file/f7a5c9629f27bd8fd920f.jpg', ori, `мυʀѕι∂ вσт-χмℓ`, 'ѕємυα ρєʀιɴтαн', '.? all', 'ᴅσɴαѕι', '.donasi', m)
     
 
     }
@@ -309,7 +309,7 @@ await conn.sendFile(m.chat, fs.readFileSync('./anuu.mp3'), 'anuu.mp3', null,�
  ptt: true, 
 seconds: 9999,
 fileLength: 99999,
- ptt: true, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply: {title: `υℓαɴg тαнυɴ мυʀѕι∂ ${ohari} нαʀι ${ojam} ᴊαм ${onet} мᴇɴιт ${detek} ᴅᴇтιк`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/f332e43a9fddef017cd30.jpg')).buffer(),}}  
+ ptt: true, contextInfo: { forwardingScore: 999, isForwarded: true, externalAdReply: {title: `υℓαɴg тαнυɴ мυʀѕι∂ ${ohari} нαʀι ${ojam} ᴊαм ${onet} мᴇɴιт ${detek} ᴅᴇтιк`, body: `${pickRandom(['мυʀѕι∂ вσт-χмℓ', 'мυʀѕι∂ вσт-χмℓ'])}`, sourceUrl: 'https://instagram.com/mursid.st', thumbnail: await (await fetch('https://telegra.ph/file/f7a5c9629f27bd8fd920f.jpg')).buffer(),}}  
       }) 
  } catch (e) {
     conn.reply(m.chat, 'мααƒ, мєɴυ ѕααт ιɴι ѕє∂αɴg єʀʀσʀ', m)
