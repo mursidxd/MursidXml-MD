@@ -247,7 +247,15 @@ let handler = async (m, { conn, usedPrefix: _p, args, command }) => {
     	      	let ori = `Hay kak, @${m.sender.split`@`[0]}
  
 мυʀѕι∂ вσт-χмℓ adalah bot whatsapp yang di bangun dengan Nodejs, dengan menggunakan server rdp yang sangat kencang, tapi tidak terlalu kencang-kencang banget.`
-return conn.send2ButtonImg(m.chat, 'https://telegra.ph/file/f7a5c9629f27bd8fd920f.jpg', ori, `мυʀѕι∂ вσт-χмℓ`, 'ѕємυα ρєʀιɴтαн', '.? all', 'ᴅσɴαѕι', '.donasi', m)
+return conn.send2ButtonImg(m.chat, 'https://telegra.ph/file/4faaadef5a6d23d44ae06.jpg', ori, `мυʀѕι∂ вσт-χмℓ`, 'ѕємυα ρєʀιɴтαн', '.? all', 'ᴅσɴαѕι', '.donasi',  m, { contextInfo: {  
+              externalAdReply: {  
+                mediaType: 2,
+                mediaUrl: 'https://instagram.com/mursid.st',  
+                title: 'ѕιмρℓє мυʀѕι∂ вσт-χмℓ',  
+                body: 'ʙʏ ᴍᴜʀsɪᴅ xᴍʟ',  
+                thumbnail: await (await fetch('https://telegra.ph/file/5c40f86212ab773ac1b15.jpg')).buffer()
+              }  
+          }}) 
     
 
     }
@@ -303,7 +311,7 @@ return conn.send2ButtonImg(m.chat, 'https://telegra.ph/file/f7a5c9629f27bd8fd920
     //await conn.send3TemplateButtonImg(m.chat, `${global.image}`, text.trim(), wm, `ρємιℓιк вσт`, `${_p}owner`, `ʀυℓєѕ`, `${_p}rules`, `ᴅσɴαѕι`, `${_p}donasi`)
     await conn.fakeReply(m.chat, 'Loading...', '0@s.whatsapp.net', 'ву мυʀѕι∂-χмℓ (+6288233832771)', 'status@broadcast')
     //await conn.send2ButtonDoc(m.chat, text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
-    await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/21af635c38cac861208c6.jpg')).buffer(), text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif Selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
+    await conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/fd4efb24c28ab7e5632b9.jpg')).buffer(), text.trim(), `*Created By* : *@${global.owner[0].split('@')[0]}*\n*Official Bot By* : *@${'0'.split('@')[0]}*\n*Aktif Selama : ${uptime}*`, `ρємιℓιк вσт`, `${_p}owner`, `ᴅσɴαѕι`, `${_p}donasi`, m)
 await conn.sendFile(m.chat, fs.readFileSync('./anuu.mp3'), 'anuu.mp3', null, m, true, { 
  type: 'audioMessage',  
  ptt: true, 
