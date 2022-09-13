@@ -37,7 +37,7 @@ handler.all = async function (m) {
 				forwardingScore: 9999,
 				isForwarded: true, // ini biar ada tulisannya diteruskan berkali-kali, jika ingin di hilangkan ganti true menjadi false
 				externalAdReply: { // Bagian ini sesuka kalian berkreasi :'v
-					title: "aktif selama: " + global.u,
+					title: "Aktif selama : " + global.u,
 					body: wm,
 					previewType: "PHOTO",
 					thumbnail: await (await fetch(img)).buffer(),
