@@ -3,7 +3,7 @@ let handler = async m => {
 let krtu = `Kartu Intro`
 m.reply(`
 ┌───────────────⬣
-│     *「KARTU INTRO 」*
+│     *「 KARTU INTRO 」*
 │ • *Nama     :*
 │ • *Gender   :* 
 │ • *Umur      :* 
