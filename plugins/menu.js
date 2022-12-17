@@ -5,11 +5,7 @@ let fetch = require('node-fetch')
 let moment = require('moment-timezone')
 const defaultMenu = {
   before: `
-┌───────────────────⬣
-│           мυʀѕι∂ вσт-χмℓ
-└┬────────────────✽
-   │        「 𝗨𝗦𝗘𝗥 𝗕𝗢𝗧 」
-┌┤⬡ *Tersisa* : %limit Limit
+⬡ *Tersisa* : %limit Limit
 ││⬡ *Role* : %role
 ││⬡ *Level* : %level 
 ││⬡ *Exp* : %totalexp XP 
@@ -17,7 +13,7 @@ const defaultMenu = {
 ││⬡ *Tanggal* : %week %weton, %date
 ││⬡ *Tanggal Islam* : %dateIslamic
 ││⬡ *Waktu* : %time
-│└────────────────✽
+│
 │⬡ *Runtime* : %uptime
 │⬡ *Bailyes Version* : Multi Device 4.5.0
 │⬡ *Server* : Panel/RDP
